@@ -1,0 +1,1097 @@
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ==========================
+   BODY
+========================== */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #6C63FF,
+        #8E44AD
+    );
+
+    overflow: hidden;
+}
+
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.container {
+    position: relative;
+
+    width: 900px;
+    max-width: 100%;
+    min-height: 600px;
+
+    background: #fff;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================
+   FORM CONTAINER
+========================== */
+
+.form-container {
+    position: absolute;
+
+    top: 0;
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff;
+
+    transition: 0.6s ease-in-out;
+}
+
+
+/* ==========================
+   LOGIN FORM
+========================== */
+
+.sign-in {
+    left: 0;
+    z-index: 2;
+}
+
+
+/* ==========================
+   SIGNUP FORM
+========================== */
+
+.sign-up {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+/* ==========================
+   FORM
+========================== */
+
+form {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form h1 {
+    font-size: 34px;
+    font-weight: 700;
+
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+
+form p {
+    font-size: 14px;
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   INPUT BOX
+========================== */
+
+.input-box {
+    position: relative;
+
+    width: 100%;
+    height: 55px;
+
+    background: #f3f4f6;
+
+    border-radius: 12px;
+
+    margin: 10px 0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+}
+
+
+.input-box i {
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+
+.input-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding-left: 15px;
+    padding-right: 45px;
+
+    font-size: 15px;
+
+    color: #333;
+}
+
+
+.input-box input::placeholder {
+    color: #999;
+}
+
+
+/* ==========================
+   PASSWORD EYE
+========================== */
+
+.toggle-password {
+    position: absolute;
+
+    right: 18px;
+
+    cursor: pointer;
+
+    color: #777;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+
+.toggle-password:hover {
+    color: #6C63FF;
+}
+
+
+/* ==========================
+   INPUT FOCUS
+========================== */
+
+.input-box:focus-within {
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+/* ==========================
+   OPTIONS
+========================== */
+
+.options {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px 0;
+
+    font-size: 14px;
+}
+
+
+.options label {
+    color: #555;
+}
+
+
+.options a {
+    color: #6C63FF;
+
+    text-decoration: none;
+}
+
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================
+   BUTTON
+========================== */
+
+button {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #6C63FF;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 15px;
+}
+
+
+button:hover {
+    background: #5848f5;
+    transform: translateY(-2px);
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* ==========================
+   SOCIAL ICONS
+========================== */
+
+form > span {
+    margin: 25px 0 15px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+.social-icons {
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: #f3f4f6;
+
+    color: #333;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+
+.social-icons a:hover {
+    background: #6C63FF;
+
+    color: #fff;
+
+    transform: translateY(-4px);
+}
+
+/* ==========================
+   OVERLAY CONTAINER
+========================== */
+
+.overlay-container {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+
+    transition: 0.6s ease-in-out;
+
+    z-index: 100;
+}
+
+
+/* ==========================
+   OVERLAY
+========================== */
+
+.overlay {
+    position: relative;
+
+    left: -100%;
+
+    width: 200%;
+    height: 100%;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6C63FF,
+        #9b59b6
+    );
+
+    transform: translateX(0);
+
+    transition: 0.6s ease-in-out;
+}
+
+
+/* ==========================
+   OVERLAY PANEL
+========================== */
+
+.overlay-panel {
+    position: absolute;
+
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    text-align: center;
+}
+
+
+.overlay-panel h1 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+
+.overlay-panel p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+}
+
+
+/* ==========================
+   OVERLAY LEFT
+========================== */
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+
+/* ==========================
+   OVERLAY RIGHT
+========================== */
+
+.overlay-right {
+    right: 0;
+
+    transform: translateX(0);
+}
+
+/* ==========================
+   GHOST BUTTON
+========================== */
+
+button.ghost {
+    width: 160px;
+    height: 48px;
+
+    background: transparent;
+
+    border: 2px solid white;
+
+    color: white;
+}
+
+
+button.ghost:hover {
+    background: white;
+
+    color: #6C63FF;
+}
+
+
+/* ==========================
+   SIGNUP ANIMATION
+========================== */
+
+.container.active .sign-in {
+    transform: translateX(100%);
+}
+
+
+.container.active .sign-up {
+    transform: translateX(100%);
+
+    opacity: 1;
+
+    z-index: 5;
+}
+
+
+.container.active .overlay-container {
+    transform: translateX(-100%);
+}
+
+
+.container.active .overlay {
+    transform: translateX(50%);
+}
+
+
+.container.active .overlay-left {
+    transform: translateX(0);
+}
+
+
+.container.active .overlay-right {
+    transform: translateX(20%);
+}
+
+/* ==========================
+   FORGOT PASSWORD
+========================== */
+
+.forgot-password {
+    left: 0;
+
+    opacity: 0;
+
+    z-index: 0;
+
+    transform: translateX(-100%);
+
+    transition: 0.6s ease-in-out;
+}
+
+
+/* ==========================
+   FORGOT PASSWORD ACTIVE
+========================== */
+
+.container.forgot-active .sign-in {
+    transform: translateX(-100%);
+
+    opacity: 0;
+}
+
+
+.container.forgot-active .sign-up {
+    transform: translateX(-100%);
+
+    opacity: 0;
+
+    z-index: 0;
+}
+
+
+.container.forgot-active .forgot-password {
+    transform: translateX(0);
+
+    opacity: 1;
+
+    z-index: 10;
+}
+
+
+.container.forgot-active .overlay-container {
+    transform: translateX(100%);
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ==========================
+   BACK TO LOGIN
+========================== */
+
+.back-login {
+    margin-top: 20px;
+
+    color: #6C63FF;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.back-login:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+   PASSWORD STRENGTH
+========================== */
+
+.password-strength {
+    width: 100%;
+
+    height: 6px;
+
+    background: #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 8px;
+}
+
+
+.strength-bar {
+    width: 0%;
+
+    height: 100%;
+
+    background: red;
+
+    transition: 0.3s;
+}
+
+
+.strength-text {
+    width: 100%;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+
+    color: #666;
+
+    text-align: left;
+}
+
+
+/* ==========================
+   CONFIRM PASSWORD MESSAGE
+========================== */
+
+.confirm-message {
+    width: 100%;
+
+    text-align: left;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================
+   TOAST NOTIFICATION
+========================== */
+
+.toast {
+    position: fixed;
+
+    top: 30px;
+
+    right: -400px;
+
+    width: 320px;
+
+    height: 65px;
+
+    background: #fff;
+
+    border-left: 6px solid #2ecc71;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    transition: 0.5s;
+
+    z-index: 9999;
+}
+
+
+.toast.show {
+    right: 30px;
+}
+
+
+.toast i {
+    font-size: 24px;
+
+    color: #2ecc71;
+}
+
+
+.toast span {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+/* ==========================
+   DECORATION
+========================== */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border-radius: 50%;
+
+    top: -100px;
+    left: -100px;
+}
+
+
+.container::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    bottom: -80px;
+    right: -80px;
+}
+
+
+/* ==========================
+   LOADING ANIMATION
+========================== */
+
+.container {
+    animation: show 0.8s ease;
+}
+
+
+@keyframes show {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 95%;
+
+        min-height: 650px;
+    }
+
+
+    .form-container {
+        width: 100%;
+    }
+
+
+    .overlay-container {
+        display: none;
+    }
+
+
+    .sign-in,
+    .sign-up,
+    .forgot-password {
+        width: 100%;
+    }
+
+
+    .container.active .sign-in {
+        transform: translateX(-100%);
+    }
+
+
+    .container.active .sign-up {
+        transform: translateX(0);
+    }
+
+
+    .container.forgot-active .sign-in {
+        transform: translateX(-100%);
+    }
+
+
+    .container.forgot-active .forgot-password {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ==========================
+   MOBILE DESIGN
+========================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+
+    .container {
+        min-height: 620px;
+
+        border-radius: 20px;
+    }
+
+
+    form {
+        width: 85%;
+    }
+
+
+    form h1 {
+        font-size: 28px;
+    }
+
+
+    form p {
+        font-size: 13px;
+    }
+
+
+    .input-box {
+        height: 50px;
+    }
+
+
+    button {
+        height: 48px;
+    }
+
+
+    .options {
+        flex-direction: column;
+
+        gap: 10px;
+
+        align-items: flex-start;
+    }
+
+
+    .toast {
+        width: calc(100% - 40px);
+
+        right: -100%;
+    }
+
+
+    .toast.show {
+        right: 20px;
+    }
+
+}
+
+
+/* ==========================
+   SCROLL FIX
+========================== */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* ==========================
+   THEME TOGGLE BUTTON
+========================== */
+
+.theme-toggle {
+    position: fixed;
+
+    top: 25px;
+    left: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #6C63FF;
+
+    font-size: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 9999;
+
+    transition: 0.3s;
+}
+
+
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+body.dark-mode {
+    background: linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+}
+
+
+/* Main Container */
+
+body.dark-mode .container {
+    background: #1e1e2f;
+}
+
+
+/* Forms */
+
+body.dark-mode .form-container {
+    background: #1e1e2f;
+}
+
+
+body.dark-mode form h1 {
+    color: #ffffff;
+}
+
+
+body.dark-mode form p {
+    color: #bdbdbd;
+}
+
+
+/* Input Box */
+
+body.dark-mode .input-box {
+    background: #2a2a3d;
+}
+
+
+body.dark-mode .input-box input {
+    color: #ffffff;
+}
+
+
+body.dark-mode .input-box input::placeholder {
+    color: #aaaaaa;
+}
+
+
+body.dark-mode .input-box i {
+    color: #bbbbbb;
+}
+
+
+/* Options */
+
+body.dark-mode .options label {
+    color: #cccccc;
+}
+
+
+/* Social Icons */
+
+body.dark-mode .social-icons a {
+    background: #2a2a3d;
+    color: #ffffff;
+}
+
+
+/* Theme Button */
+
+body.dark-mode .theme-toggle {
+    background: #2a2a3d;
+    color: #f1c40f;
+}
+
+
+/* Password Strength Text */
+
+body.dark-mode .strength-text {
+    color: #cccccc;
+}
+
+
+/* Forgot Password Back */
+
+body.dark-mode .back-login {
+    color: #9b8cff;
+}
+.form-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* ==========================
+   OVERLAY IMAGE
+========================== */
+
+.overlay-image {
+
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+}
+/* ==========================
+   FORGOT PASSWORD
+========================== */
+
+.forgot-password {
+    display: flex;
+    width: 900px;
+    min-height: 600px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+/* Form Left Side */
+.forgot-password form {
+    width: 50%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Image Right Side */
+.forgot-image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.forgot-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.forgot-password {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.forgot-password form {
+    width: 50%;
+    padding: 50px;
+}
+
+.forgot-image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.forgot-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Animated Login & Signup</title>
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================
+     MAIN CONTAINER
+========================== -->
+
+<div class="container"
+     id="container">
+
+
+    <!-- ==========================
+         LOGIN FORM
+    ========================== -->
+
+    <div class="form-container sign-in">
+
+        <form>
+            <h1>
+
+                Welcome Back
+
+            </h1>
+
+
+            <p>
+
+                Sign in to continue
+
+            </p>
+
+
+            <!-- Email -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+
+                <input
+                    type="email"
+                    placeholder="Email Address">
+
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+
+                <input
+                    type="password"
+                    placeholder="Password"
+                    id="loginPassword">
+
+
+                <i
+                    class="fa-solid fa-eye toggle-password"
+                    id="loginEye">
+
+                </i>
+
+            </div>
+
+
+            <!-- Options -->
+
+            <div class="options">
+
+
+                <label>
+
+                    <input
+                        type="checkbox">
+
+                    Remember Me
+
+                </label>
+
+
+                <a
+                    href="#"
+                    id="forgotBtn">
+
+                    Forgot Password?
+
+                </a>
+
+
+            </div>
+
+
+            <!-- Login Button -->
+
+            <button
+                type="submit">
+
+                Sign In
+
+            </button>
+
+
+            <span>
+
+                or continue with
+
+            </span>
+
+
+            <!-- Social Icons -->
+
+            <div class="social-icons">
+
+
+                <a href="#">
+
+                    <i
+                        class="fab fa-google">
+
+                    </i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i
+                        class="fab fa-github">
+
+                    </i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i
+                        class="fab fa-microsoft">
+
+                    </i>
+
+                </a>
+
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+    <!-- ==========================
+         SIGNUP FORM
+    ========================== -->
+
+    <div class="form-container sign-up">
+
+        <form>
+
+            <h1>
+
+                Create Account
+
+            </h1>
+
+
+            <p>
+
+                Create your free account
+
+            </p>
+
+
+            <!-- Full Name -->
+
+            <div class="input-box">
+
+
+                <i
+                    class="fa-solid fa-user">
+
+                </i>
+
+
+                <input
+                    type="text"
+                    placeholder="Full Name">
+
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="input-box">
+
+
+                <i
+                    class="fa-solid fa-envelope">
+
+                </i>
+
+
+                <input
+                    type="email"
+                    placeholder="Email Address">
+
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="input-box">
+
+
+                <i
+                    class="fa-solid fa-lock">
+
+                </i>
+
+
+                <input
+                    type="password"
+                    placeholder="Password"
+                    id="signupPassword">
+
+
+                <i
+                    class="fa-solid fa-eye toggle-password"
+                    id="signupEye">
+
+                </i>
+
+
+            </div>
+
+
+            <!-- Confirm Password -->
+
+            <div class="input-box">
+
+
+                <i
+                    class="fa-solid fa-lock">
+
+                </i>
+
+
+                <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    id="confirmPassword">
+
+
+                <i
+                    class="fa-solid fa-eye toggle-password"
+                    id="confirmEye">
+
+                </i>
+
+
+            </div>
+
+
+            <!-- Confirm Message -->
+
+            <p
+                class="confirm-message"
+                id="confirmMessage">
+
+            </p>
+
+
+            <!-- Password Strength -->
+
+            <div
+                class="password-strength">
+
+
+                <div
+                    class="strength-bar">
+
+                </div>
+
+
+            </div>
+
+
+            <p
+                class="strength-text">
+
+                Password Strength
+
+            </p>
+
+
+            <!-- Signup Button -->
+
+            <button
+                type="submit">
+
+                Create Account
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+    <!-- ==========================
+         FORGOT PASSWORD
+    ========================== -->
+   <div class="form-container forgot-password">
+
+    <!-- Form -->
+    <form>
+
+        <h1>
+            Forgot Password
+        </h1>
+
+        <p>
+            Enter your email to reset password
+        </p>
+
+        <div class="input-box">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <input
+                type="email"
+                placeholder="Email Address">
+
+        </div>
+
+        <button type="submit">
+            Send Reset Link
+        </button>
+
+        <span
+            class="back-login"
+            id="backLogin">
+
+            ← Back to Login
+
+        </span>
+
+    </form>
+
+
+    <!-- Image -->
+    <div class="forgot-image">
+
+        <img
+            src="image/login-image.jpg.png"
+            alt="Forgot Password">
+
+    </div>
+
+</div>
+
+
+    <!-- ==========================
+         OVERLAY
+    ========================== -->
+
+    <div
+        class="overlay-container">
+
+
+        <div
+            class="overlay">
+
+
+            <!-- Left Panel -->
+
+            <div class="overlay-panel overlay-left">
+
+            <!-- Login Image -->
+
+                <img
+                    src="image/login-image.jpg.png"
+                    alt="Login"
+                    class="overlay-image">
+
+                <h1>
+
+                    Already have an account?
+
+                </h1>
+
+                <p>
+
+                    Sign in and continue your journey.
+
+                </p>
+
+                <button
+                    class="ghost"
+                    id="login">
+
+                    Back to Login
+
+                </button>
+
+            </div>
+
+
+            <!-- Right Panel -->
+
+            <div class="overlay-panel overlay-right">
+
+            <!-- Signup Image -->
+
+                <img
+                    src="image/signup-image.jpg.png"
+                    alt="Create Account"
+                    class="overlay-image">
+
+
+                <h1>
+
+                    New Here?
+
+                </h1>
+
+                <p>
+
+                    Create your account and get started.
+
+                </p>
+
+
+                <button
+                 class="ghost"
+                    id="register">
+
+                    Create Account
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- ==========================
+     TOAST
+========================== -->
+
+<div
+    class="toast"
+    id="toast">
+
+
+    <i
+        class="fa-solid fa-circle-check">
+
+    </i>
+
+
+    <span
+        id="toastMessage">
+
+        Success
+
+    </span>
+
+
+</div>
+
+
+<!-- ==========================
+     DARK MODE
+========================== -->
+
+<button
+    class="theme-toggle"
+    id="themeToggle">
+
+
+    <i
+        class="fa-solid fa-moon">
+
+    </i>
+
+
+</button>
+
+
+<!-- ==========================
+     JAVASCRIPT
+========================== -->
+
+<script
+    src="script.js">
+
+</script>
+
+
+</body>
+
+</html>
