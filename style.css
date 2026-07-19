@@ -1095,3 +1095,132 @@ body.dark-mode .back-login {
     height: 100%;
     object-fit: cover;
 }
+
+/* ==========================
+   MOBILE RESPONSIVE FIX
+========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 420px;
+        min-height: 650px;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .form-container {
+        width: 100%;
+        position: absolute;
+        padding: 30px 20px;
+    }
+
+    /* Signup mobile par sahi show ho */
+    .sign-up {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .container.active .sign-in {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .container.active .sign-up {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 5;
+    }
+
+    /* Overlay mobile par neeche show ho */
+    .overlay-container {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 180px;
+        transform: none !important;
+        z-index: 10;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        transform: none !important;
+    }
+
+    .overlay-panel {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .overlay-panel h1 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .overlay-panel p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .overlay-image {
+        display: none;
+    }
+
+    /* Mobile par Create Account button visible */
+    .overlay-panel button {
+        display: inline-block;
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+    /* Login screen */
+    .overlay-left {
+        display: none;
+    }
+
+    .overlay-right {
+        display: flex;
+    }
+
+    /* Signup open hone par Login button show */
+    .container.active .overlay-right {
+        display: none;
+    }
+
+    .container.active .overlay-left {
+        display: flex;
+    }
+
+    /* Forgot Password */
+    .container.forgot-active .overlay-container {
+        display: none;
+    }
+
+    .forgot-password {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    /* Inputs */
+    .input-box {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
